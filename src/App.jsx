@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./styles.css"
 
-function App() {//This is a functional component since there is a cap letter
-  const [count, setCount] = useState(0)
 
+export default function App(){
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <form className="new-item-form">
+      <div className="formrow">
+        <label htmlFor="item">New Item</label>
+        <input type="text" id="item" />
 
-export default App
+        <button className="btn">Add</button>
+
+      </div>
+    </form>
+    <h1 className="header">To Do List</h1>
+    <ul className="list">
+      <li>
+        <label htmlFor=""><input type="checkbox" />
+        Item1
+        </label>
+        <button className="btn-danger">Delete</button>
+      </li>
+      <li>
+        <label htmlFor=""><input type="checkbox" />
+        Item2
+        </label>
+        <button className="btn-danger">Delete</button>
+      </li>
+    </ul>
+    </>
+)
+}
